@@ -1,0 +1,22 @@
+{
+  "verbose": true,
+  "debug": false,
+  "exec": "ts-node ./server/index.ts",
+  "ignore": [
+    "mochawesome-report",
+    "node_modules",
+    "./test",
+    "**/*.d.ts",
+    "*.test.ts",
+    "*.spec.ts",
+    "fixtures/*",
+    "test/**/*",
+    "docs/*"
+  ],
+  "events": {
+    "restart": ""
+  },
+  "watch": ["./server", "./configs"],
+  "ext": "ts",
+  "inspect": true
+}
