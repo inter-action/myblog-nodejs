@@ -11,12 +11,7 @@
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
     "outDir": "build",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "server/*"
-      ]
-    }
+    "baseUrl": "."
   },
   "include": [
     "./server/**/*"
