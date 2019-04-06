@@ -10,6 +10,9 @@ dev:
 compile:
 	tsc
 
+compile.watch:
+	tsc -w
+
 debug.tsc.chrome:
 	node --inspect-brk build/index.js
 
