@@ -1,8 +1,7 @@
 
-import { readFilePr, omit } from '../utils'
+import { readFilePr, omit, slugify } from '../utils'
 import { Either, Left, Right, Option, None, Some } from 'funfix-core'
 const YAML = require('yaml')
-const slugify = require('limax')
 
 
 export class Article {
@@ -38,7 +37,7 @@ export class Article {
     let m = YAML.parse(meta)
 
     this.title = m.title
-    this.slug = slugify(this.title, {tone: false})
+    this.slug = slugify(this.title)
     if (m.created){
       //exception could throw on .get
       this.created = parseDateStr(m.created).get()

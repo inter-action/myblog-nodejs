@@ -2,6 +2,9 @@ import * as nodeUtil from 'util'
 import * as fs from 'fs'
 import * as npath from 'path'
 
+const convertToPinyin = require('convert-chinese-to-pinyin')
+const slugifyEnglish = require('slugify')
+
 export const readFilePr = nodeUtil.promisify(fs.readFile)
 export const readdirPr = nodeUtil.promisify(fs.readdir)
 export const statPr = nodeUtil.promisify(fs.stat)
@@ -26,3 +29,18 @@ export function omit(omitKeys: string[], obj: any) {
   }, {})
 }
 
+export function slugify(text: string){
+  const containChinese = (text: string) => /[\u4e00-\u9fa5]+/.test(text)
+  if (containChinese(text)){
+    text = text.replace(/([\u4e00-\u9fa5]+)/g, (_match, chinese)=>{
+      return convertToPinyin(chinese).replace(/[A-Z]/g, (c: string)=> `-${c.toLowerCase()}`)
+    })
+    let i = 0
+    for (let l = text.length; i < l; i++){
+      if (text[i] !== '-') break;
+    }
+    text = text.slice(i)
+  }
+
+  return slugifyEnglish(text)
+}
