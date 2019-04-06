@@ -37,7 +37,7 @@ export const createServer = async (): Promise<Koa> => {
 }
 
 createServer().then(app => {
-  app.listen(3000, () => {
+  app.listen(process.env.APP_PORT || 5000, () => {
     console.log(`start server successfully`)
   })
 })

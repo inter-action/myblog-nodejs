@@ -12,6 +12,7 @@
     "test/**/*",
     "docs/*"
   ],
+  "delay": 1,
   "events": {
     "restart": ""
   },
