@@ -58,3 +58,5 @@ build/
 mdroot/
 
 frontend
+
+ansible/hosts

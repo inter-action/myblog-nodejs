@@ -31,3 +31,8 @@ docker.container.start:
 
 docker.container.stop:
 	docker stop myblog
+
+run.ansible:
+	cd ansible && ansible-playbook deploy-playbook.yaml
+
+deploy: run.ansible

@@ -26,6 +26,32 @@ links:
 * [Debugging Visual Studio Code (Node)](https://www.youtube.com/watch?v=yFtU6_UaOtA)
 
 
+
+## deployment
+the automatic deployment process depends on `anisble` & `docker`, you have to install them first
+
+### anisible:
+! configure your ssh correctly on both your dev computer & your server
+
+create a [inventory](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#host-variables) file under anisible folder, `touch ansible/hosts`, insert your server 
+content with format like below
+
+```
+[staging]
+139.59.170.69
+
+[production]
+139.59.170.70
+
+[wordpress]
+139.59.170.69:<your customized ssh port, if not 22>
+```
+
+
+
+links:
+* [Automating Server Setup with Ansible](https://deliciousbrains.com/automating-server-setup-ansible/)
+
 ## typescript
 
 * typescript path alias, 
