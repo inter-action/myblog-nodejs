@@ -1,4 +1,11 @@
 
+## before start you dev
+
+```
+npm i -g nodemon
+```
+
+
 ## debugging
 using chrome:
 
@@ -25,6 +32,13 @@ links:
     * https://dev.to/lars124/path-aliases-with-typescript-in-nodejs-4353
 
 
+## docker 
+
+creating a docker build
+```
+docker build -t <your_dockerhub_username>/<your_dockerhub_reponame> .
+
+```
 
 ## todos
 

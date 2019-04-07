@@ -1,0 +1,12 @@
+anisible/
+docs/
+frontend/
+mdroot/
+node_modules/
+server/
+npm-debug.log
+Dockerfile
+.dockerignore
+.git
+.gitignore
+
