@@ -34,10 +34,15 @@ links:
 
 ## docker 
 
-creating a docker build
+* creating a docker build
 ```
 docker build -t <your_dockerhub_username>/<your_dockerhub_reponame> .
 
+# push to your remote repo
+docker push <REPOSITORY>
+
+# clean docker resources
+docker system prune -a
 ```
 
 ## todos
